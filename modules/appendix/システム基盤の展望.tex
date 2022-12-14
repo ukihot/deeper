@@ -1,0 +1,25 @@
+\chapter{システム俯瞰図}
+
+\begin{tikzpicture}
+    \path[mindmap,concept color=black,text=white]
+    node[concept] {IT~システム}
+    [clockwise from=0]
+    child[concept color=green!50!black] {
+            node[concept] {販売管理システム}
+                [clockwise from=90]
+            child { node[concept] {RemoteApp} }
+            child { node[concept] {Oracle} }
+            child { node[concept] {VB} }
+        }
+    child[concept color=blue] {
+            node[concept] {奉行}
+                [clockwise from=200]
+            child { node[concept] {勘定奉行} }
+            child { node[concept] {固定資産奉行} }
+            child { node[concept] {人事奉行} }
+            child { node[concept] {給与奉行} }
+            child { node[concept] {勤怠管理クラウド} }
+        }
+    child[concept color=red] { node[concept] {List~Works} }
+    child[concept color=orange] { node[concept] {Domo} };
+\end{tikzpicture}

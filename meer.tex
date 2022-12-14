@@ -1,0 +1,64 @@
+\documentclass[uplatex, a4j, onecolumn, 12pt, dvipdfmx]{jsbook}
+%% 設定値
+%% ---
+\usepackage{bm}
+\usepackage{siunitx}
+\usepackage{cases}
+\usepackage{cite}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage[dvipdfmx]{color}
+\usepackage{subfig}
+\usepackage{here}
+\usepackage{color}
+\usepackage{amssymb}
+\usepackage{ascmac}
+\usepackage{tikz}
+\usepackage{afterpage}
+\usetikzlibrary{calc,
+shapes.geometric,
+mindmap
+}
+\newcommand{\srate}{0.7\linewidth}
+\newcommand{\drate}{0.45\linewidth}
+\exhyphenpenalty=2000\relax
+\graphicspath{{assets/}}
+\title{\Large ツチヨシ産業IT~セキュリティポリシー}
+\author{総務部総務課}
+\date{\rightline{\today}}
+\setlength{\textwidth}{\fullwidth}
+\setlength{\evensidemargin}{\oddsidemargin}
+\begin{document}
+\pagenumbering{roman}
+\maketitle
+\setcounter{page}{1}
+\tableofcontents
+\clearpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+%% ---
+
+%% 文章本体
+%% ---
+\part*{総則}
+\include{modules/総則.tex}
+\part{セキュリティポリシー} \label{セキュリティポリシー}
+\include{modules/security/組織的対策.tex}
+\include{modules/security/人的対策.tex}
+\include{modules/security/情報資産管理.tex}
+\include{modules/security/アクセス制御および認証.tex}
+\include{modules/security/物理的対策.tex}
+\include{modules/security/ソフトウェアとハードウェア.tex}
+\include{modules/security/IT基盤運用管理.tex}
+\include{modules/security/システム開発基準.tex}
+\include{modules/security/ベンダー管理.tex}
+\include{modules/security/インシデント管理及びBCP.tex}
+\include{modules/security/個人番号及び特定個人情報の取扱い.tex}
+%% ---
+
+%% 補遺
+%% ---
+\renewcommand{\appendixname}{補遺}
+\appendix
+\include{modules/appendix/システム基盤の展望.tex}
+%% ---
+\end{document}
